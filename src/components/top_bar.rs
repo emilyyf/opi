@@ -7,7 +7,6 @@ pub fn TopBar(cx: Scope) -> Element {
             background_color: "blue",
             color: "white",
             position: "absolute",
-            padding: "0",
             height: "42px",
             top: "0",
             left: "0",

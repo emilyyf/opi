@@ -7,9 +7,14 @@ use components::*;
 pub fn app(cx: Scope) -> Element {
     render! {
         div {
+            display: "flex",
+            flex_direction: "column",
             TopBar {}
-            ExpensesInput {}
-            ExpensesTable {}
+            div {
+                padding_top: "42px",
+                ExpensesInput {}
+                ExpensesTable {}
+            }
         }
     }
 }
