@@ -1,9 +1,15 @@
 use dioxus::prelude::*;
 
+mod components;
+
+use components::*;
+
 pub fn app(cx: Scope) -> Element {
     render! {
         div {
-            "Nya :3"
+            TopBar {}
+            ExpensesInput {}
+            ExpensesTable {}
         }
     }
 }
