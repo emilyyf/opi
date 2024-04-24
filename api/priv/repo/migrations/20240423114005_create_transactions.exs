@@ -7,6 +7,7 @@ defmodule Api.Repo.Migrations.CreateTransactions do
       add :description, :string
       add :date, :naive_datetime
       add :amount, :integer
+      add :type, :integer
 
       timestamps(type: :utc_datetime)
     end

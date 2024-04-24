@@ -7,15 +7,17 @@ defmodule ApiWeb.TransactionControllerTest do
 
   @create_attrs %{
     amount: 42,
-    date: ~N[2024-04-21 11:49:00],
-    description: "some description"
+    date: ~N[2024-04-22 11:41:00],
+    description: "some description",
+    type: 42
   }
   @update_attrs %{
     amount: 43,
-    date: ~N[2024-04-22 11:49:00],
-    description: "some updated description"
+    date: ~N[2024-04-23 11:41:00],
+    description: "some updated description",
+    type: 43
   }
-  @invalid_attrs %{amount: nil, date: nil, description: nil}
+  @invalid_attrs %{amount: nil, date: nil, description: nil, type: nil}
 
   setup %{conn: conn} do
     {:ok, conn: put_req_header(conn, "accept", "application/json")}
@@ -38,8 +40,9 @@ defmodule ApiWeb.TransactionControllerTest do
       assert %{
                "id" => ^id,
                "amount" => 42,
-               "date" => "2024-04-21T11:49:00",
-               "description" => "some description"
+               "date" => "2024-04-22T11:41:00",
+               "description" => "some description",
+               "type" => 42
              } = json_response(conn, 200)["data"]
     end
 
@@ -61,8 +64,9 @@ defmodule ApiWeb.TransactionControllerTest do
       assert %{
                "id" => ^id,
                "amount" => 43,
-               "date" => "2024-04-22T11:49:00",
-               "description" => "some updated description"
+               "date" => "2024-04-23T11:41:00",
+               "description" => "some updated description",
+               "type" => 43
              } = json_response(conn, 200)["data"]
     end
 

@@ -20,7 +20,8 @@ defmodule ApiWeb.TransactionJSON do
       id: transaction.id,
       description: transaction.description,
       date: transaction.date,
-      amount: transaction.amount
+      amount: transaction.amount,
+      type: transaction.type
     }
   end
 end
