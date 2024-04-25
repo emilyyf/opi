@@ -8,7 +8,7 @@ defmodule Api.OPI.Transaction do
     field :amount, :integer
     field :date, :naive_datetime
     field :description, :string
-    field :type, :integer
+    embeds_one :type, Api.OPI.Type
 
     timestamps(type: :utc_datetime)
   end

@@ -8,6 +8,7 @@ defmodule ApiWeb.Router do
   scope "/api", ApiWeb do
     pipe_through :api
     resources "/transactions", TransactionController
+    resources "/types", TypeController
   end
 
   # Enable LiveDashboard and Swoosh mailbox preview in development
