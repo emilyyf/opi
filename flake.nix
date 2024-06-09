@@ -17,7 +17,7 @@
       in {
         devShell = pkgs.mkShell {
           packages = with pkgs; [
-						elixir
+            elixir
             zsh
           ];
 

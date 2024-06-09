@@ -7,5 +7,8 @@ defmodule OpiWeb.Router do
 
   scope "/api", OpiWeb do
     pipe_through :api
+    resources "/transactions", TransactionController
+    resources "/accounts", AccountController
+    resources "/types", TypeController
   end
 end
