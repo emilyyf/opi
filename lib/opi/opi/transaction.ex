@@ -16,7 +16,7 @@ defmodule Opi.OPI.Transaction do
   @doc false
   def changeset(transaction, attrs) do
     transaction
-    |> cast(attrs, [:description, :date, :value, :months])
+    |> cast(attrs, [:description, :date, :value, :months, :account_id, :type_id])
     |> validate_required([:description, :date, :value, :months])
   end
 end
