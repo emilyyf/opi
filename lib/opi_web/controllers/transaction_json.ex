@@ -21,7 +21,9 @@ defmodule OpiWeb.TransactionJSON do
       description: transaction.description,
       date: transaction.date,
       value: transaction.value,
-      months: transaction.months
+      months: transaction.months,
+      type_id: transaction.type_id,
+      account_id: transaction.account_id
     }
   end
 end

@@ -40,6 +40,7 @@ defmodule Opi.MixProject do
       {:telemetry_poller, "~> 1.0"},
       {:jason, "~> 1.2"},
       {:dns_cluster, "~> 0.1.1"},
+      {:cors_plug, "~> 3.0"},
       {:bandit, "~> 1.2"}
     ]
   end
